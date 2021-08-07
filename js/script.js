@@ -1,34 +1,3 @@
-function parseArr(inValues) {
-    console.log(inValues);
-    let temp = inValues;
-    let arr = [];
-    let element = "";
-    let f = 0;
-    for (let i=0, newArr=0; ; i++) {
-        let symbol = String(temp.substr(i, 1));
-        //element += symbol === " " ? "" : symbol;
-
-        if (symbol && (symbol != " ")) f = 1;
-        console.log("flag");
-
-        if ((symbol === " ") || (symbol === "") && (f == 1)) {
-            f = 0;
-            arr[newArr] = element;
-            console.log(element);
-            newArr++;
-            element = "";
-        }
-        element += f == 1 ? symbol : "";
-        if (symbol === "") {
-            //console.log("stop");
-            //console.log(arr);
-            return arr;
-            brake;
-        }
-    }
-
-}
-
 //task 1
 function arrSum(inputArr) {
     let result = 0;
@@ -36,7 +5,6 @@ function arrSum(inputArr) {
         result += parseFloat(inputArr[i]);
     }
     return result;
-
     // для случая если надо собрать все символы в одну строку
     // let result = "";
     // for (let i=0; i<inputArr.length; i++) {
@@ -59,6 +27,33 @@ function addArr(arrFirst, arrSecond){
     return newArr;
 }
 
+function parseArr(inValues) {
+    console.log(inValues);
+    let temp = inValues;
+    let arr = [];
+    let element = "";
+    let f = 0;
+    for (let i=0, newArr=0; ; i++) {
+        let symbol = String(temp.substr(i, 1));
+        //element += symbol === " " ? "" : symbol;
+
+        if (symbol && (symbol != " ")) f = 1;
+        console.log("flag");
+
+        if ((symbol === " ") || (symbol === "") && (f == 1)) {
+            f = 0;
+            arr[newArr] = element;
+            console.log(element);
+            newArr++;
+            element = "";
+        }
+        element += f == 1 ? symbol : "";
+        if (symbol === "") {
+            return arr;
+            brake;
+        }
+    }
+}
 function arrSumEntered() {
     let enteredArr = prompt("Введите массив элементов (элементы разделять проблелом)");
     let  inArrSum = document.querySelector(".in-arr-sum");
