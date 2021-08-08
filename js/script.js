@@ -50,7 +50,10 @@ function parseArr(inValues) {
             f = 1;
             arr[++newArr] = element;
             element = "";
-        } else if (symbol === "") {
+        } else if (symbol === "" && element === ""){
+            break;
+        }
+        else if (symbol === "") {
             arr[++newArr] = element;
             break;
         }
