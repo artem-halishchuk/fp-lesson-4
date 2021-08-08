@@ -1,2 +1,2 @@
-# fp-lesson-3
-cycles
+# fp-lesson-4
+arrays and functions
