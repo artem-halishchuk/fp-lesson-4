@@ -15,8 +15,6 @@ function arrSum(inputArr) {
 function searchValue(inArr, inValue) {
     let outArr = [];
     for (let i=0, n=-1; i<inArr.length; i++) {
-        console.log(inArr[i]);
-        console.log(inValue[0]);
         if (inArr[i] == inValue[0]) {
             n++;
             outArr[n] = i;
@@ -35,7 +33,6 @@ function addArr(arrFirst, arrSecond){
 
 function parseArr(inValues) {
     let temp = inValues;
-    console.log(temp);
     let arr = [];
     let element = "";
     let f = 1;
@@ -56,7 +53,6 @@ function parseArr(inValues) {
             break;
         }
     }
-    console.log(arr);
     return arr;
 }
 function arrSumEntered() {
