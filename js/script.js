@@ -35,16 +35,17 @@ function parseArr(inValues) {
     let temp = inValues;
     let arr = [];
     let element = "";
-    let f = 1;
+    let flagSpace = 1;
+    let symbolSpace = " ";
 
     for (let i=0, newArr=-1; ; i++) {
         let symbol = String(temp.substr(i, 1));
-        if (symbol === " " && f === 1) continue;
-        else if (symbol !== " " && symbol !== "") {
+        if (symbol === symbolSpace && flagSpace === 1) continue;
+        else if (symbol !== symbolSpace && symbol !== "") {
             element += symbol;
-            f = 0;
-        } else if (symbol === " " && element != "") {
-            f = 1;
+            flagSpace = 0;
+        } else if (symbol === symbolSpace && element != "") {
+            flagSpace = 1;
             arr[++newArr] = element;
             element = "";
         } else if (symbol === "" && element === "") break;
